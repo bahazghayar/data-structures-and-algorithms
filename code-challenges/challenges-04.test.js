@@ -144,7 +144,7 @@ const citiesAtoJ = (arr) => {
     return arr6 ;
     
 };
-
+// 
 // let cities = ['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'];
 
 // test('It should return the cities whose names begin with the letters A through J', () => {
