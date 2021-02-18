@@ -82,7 +82,19 @@ Write a function named containsWorld that takes in a string or number of any len
 
 const containsWorld = (input) => {
   // Solution code here...
+  let reg4 = /(world)/g ; 
+
+  return reg4.test(input) ;
 };
+
+// test('It should return true if the input contains the word school in lower case', () => {
+//   expect(containsWorld('hello world')).toBe(true);
+// });
+// test('It should return false if the input contains the word school with any upper case letters', () => {
+//   expect(containsWorld('Hello World')).toBe(false);
+// });
+// test('It should return false if the input does not contain the word school', () => {
+//   expect(containsWorld('hello everyone')).toBe(false);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -94,7 +106,23 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
+  let reg5 = /\b[A-Z](\w)*/g ; 
+  
+  if (str.match(reg5)) {
+    return str.match(reg5) ; 
+  } else return [];
+  
 };
+
+// test('It should only return words that begin with a capital letter', () => {
+//   const capitalResult = isCapitalized('We only want to Return the Words that begin With a capital Letter');
+
+//   expect(capitalResult).toStrictEqual([ 'We', 'Return', 'Words', 'With', 'Letter' ]);
+//   expect(capitalResult.length).toStrictEqual(5);
+
+//   expect(isCapitalized('Given by our hand in the meadow that is called Runnymede, between Windsor and Staines, on the fifteenth day of June in the seventeenth year of our reign (i.e. 1215: the new regnal year began on 28 May).')).toStrictEqual(['Given', 'Runnymede', 'Windsor', 'Staines', 'June', 'May']);
+
+//   expect(isCapitalized('these words are all failures')).toStrictEqual([]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -104,7 +132,32 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+    let arr6 = [] ; 
+    let reg6 = /^[A-J]\w+/   ; 
+
+    arr.forEach (val => {
+      if (reg6.test(val)) {
+        arr6.push(val) ; 
+      }
+    })
+
+    return arr6 ;
+    
 };
+
+// let cities = ['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'];
+
+// test('It should return the cities whose names begin with the letters A through J', () => {
+//   expect(citiesAtoJ(cities)).toContain('Cleveland', 'Birmingham', 'Austin', 'Boston', 'Hoboken');
+//   expect(citiesAtoJ(cities).length).toStrictEqual(5);
+
+//   expect(citiesAtoJ([])).toStrictEqual([]);
+//   expect(citiesAtoJ(['Albuquerque', 'Chicago', 'Philadelphia', 'Newark', 'Sacramento', 'Eugene'])).toEqual(expect.arrayContaining(['Albuquerque', 'Chicago', 'Eugene']));
+// });
+
+// test('It should not return the cities whose names begin with the letters K through Z', () => {
+//   expect(citiesAtoJ(cities)).not.toContain('San Diego', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Newport Beach');
+// });
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
