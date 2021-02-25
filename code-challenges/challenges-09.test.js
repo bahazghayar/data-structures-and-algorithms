@@ -164,12 +164,12 @@ const reversedString = (str) => {
   // Solution code here...
   let str6 = str.split('') ;
  
-  let arr6 = str6.reduce((acc,val)=>{
+  let str6b = str6.reduce((acc,val)=>{
      acc = val +acc ; 
       
        return acc ;
   },'');
-  return arr6 ;
+  return str6b ;
 };
 
 /* ------------------------------------------------------------------------------------------------
