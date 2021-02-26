@@ -44,11 +44,11 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
-  let arr3 = arr.filter( function(n,i) {
-  return  n.includes('and') ;
+  let arr3 = arr.filter(function (n, i) {
+    return n.includes('and');
 
-})
-   return arr3 ;
+  })
+  return arr3;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -61,11 +61,11 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
-  let arr4 = arr.filter (function(n,i) {
-    return (n%2) ;
+  let arr4 = arr.filter(function (n, i) {
+    return (n % 2);
 
-})
-   return arr4
+  })
+  return arr4
 
 };
 
@@ -82,6 +82,8 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
+  const vowelRegex = /[aeiou]/;
+  return arr.filter(str => vowelRegex.test(str));
 };
 
 
@@ -95,6 +97,13 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
+  let arr6 = arr.filter(function (n) {
+
+    if (!forbiddenValues.includes(n)) {
+      return n;
+    }
+  })
+  return arr6;
 };
 
 /* ------------------------------------------------------------------------------------------------
