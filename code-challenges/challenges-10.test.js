@@ -24,6 +24,16 @@ Returns: ['dyoll', 'eimaj'];
 
 const getNames = (arr) => {
   // Solution code here...
+  let arr1a = arr.map(val => {
+    return val.name;
+  })
+
+  let arr1b = [];
+  arr1a.forEach(function (val) {
+    arr1b.push(val.split('').reverse().join(''));
+  })
+
+  return arr1b;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,6 +48,21 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
+  let arr2a = input.map(val => {
+    let arr2b = val.reduce((acc, val) => {
+      if (target === val) {
+        acc++;
+      }
+      return acc;
+    }, 0);
+
+    return arr2b;
+  });
+
+  return arr2a.reduce((acc, val) => {
+    acc = acc + val;
+    return acc
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,6 +77,14 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
+  let totalSum3 = 0;
+
+  input.forEach(val => {
+    val.forEach(val => {
+      totalSum3 = totalSum3 + val;
+    })
+  })
+  return totalSum3;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -68,6 +101,20 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  let arr4a = input.map((val) => {
+
+    let filter4 = val.filter((val) => {
+      if (val % 5 === 0 && typeof val === "number") {
+        return val;
+      }
+    })
+      .map((val) => {
+        return Math.pow(2, val);
+      });
+
+    return filter4;
+  });
+  return arr4a;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,16 +181,40 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  let arr5a = [];
+  data.forEach(val => {
+    if (val.gender === 'male' || val.gender === 'female') {
+      arr5a.push(val);
+    }
+  })
+
+  let arr5b = [];
+  arr5a.forEach(val => {
+    arr5b.push(val.name);
+  })
+
+  let arr5c = arr5b.join(' and ');
+  return arr5c;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
 
-Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the shortest character.
+Write a function named findShortest that, given the Star Wars data from Challenge 5, uses any combination of filter, map and reduce to return the name of the shortest character.
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
   // Solution code here...
+  data.sort((a, b) => {
+    if (a.height > b.height) {
+      return -1;
+    } else if (a.height < b.height) {
+      return 1;
+    } else {
+      return 0;
+    }
+  })
+  return data[0].name;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -159,7 +230,7 @@ Run your tests from the console: jest challenges-10.test.js
 
 describe('Testing challenge 1', () => {
   test('It returns an array of names reversed', () => {
-    expect(getNames([{name:'lloyd', age: 32, shoeSize: 12}, {name:'jamie', age:21, shoeSize: 8}])).toStrictEqual(['dyoll', 'eimaj']);
+    expect(getNames([{ name: 'lloyd', age: 32, shoeSize: 12 }, { name: 'jamie', age: 21, shoeSize: 8 }])).toStrictEqual(['dyoll', 'eimaj']);
     expect(getNames([])).toStrictEqual([]);
   });
 });
