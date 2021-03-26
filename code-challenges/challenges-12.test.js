@@ -32,11 +32,11 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
-  let maxArr = matrix.map(val=> Math.max.apply(null, val)); 
-  let max = maxArr.reduce(function(a,b){
-    return Math.max(a,b) ;
+  let maxArr = matrix.map(val => Math.max.apply(null, val));
+  let max = maxArr.reduce(function (a, b) {
+    return Math.max(a, b);
   })
-   return max ;
+  return max;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,6 +55,13 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
+  let sum = 0;
+  matrix.forEach(array => {
+    array.forEach(value => {
+      sum += value;
+    });
+  });
+  return sum;
 };
 
 
@@ -82,7 +89,14 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
-
+  let hourlyTotal = hoursOpen.map((hour, i) => {
+    let sum = 0;
+    stores.forEach(store => {
+      sum += store[i];
+    })
+    return sum;
+  })
+  return hourlyTotal;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -97,6 +111,13 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  let salesArr = [];
+  hours.forEach ((hour , i ) =>{
+      let hourSales = { sales:`${data[i]} cookies` , time: `${hour}` }
+
+      salesArr.push(hourSales);
+  })
+  return salesArr ;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,6 +143,18 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  let quantity ; 
+   arr.forEach( val =>{
+      if (val.store === 'Pet store') {
+        val.items.forEach (item =>{
+          if (item.name === 'Treats'){
+            // console.log(item.quantity)
+             quantity=  item.quantity ; 
+          }
+        })
+      }
+   })
+   return quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
