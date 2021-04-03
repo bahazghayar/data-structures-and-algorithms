@@ -37,5 +37,5 @@
 
 ## API
 
-![LinkedList](../../assets/linked-list.png)
+![LinkedList](../assets/linked-list.png)
 
