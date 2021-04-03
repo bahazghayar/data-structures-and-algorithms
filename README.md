@@ -11,4 +11,5 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 |  Array Revese |[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/code-challenges/arrayReverse)         |
 |  Array Shift  |[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/code-challenges/arrayShift)           |
 | Binary Search |[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/code-challenges/arrayBinarySearch)    |
+| Linked List   |[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/Data-Structures/linkedList)           |
 
