@@ -26,12 +26,11 @@
 - ### toString:
 #### return all of the values in the linkedList as a string.
 - ### append: 
-
-
+#### adds a new node with the given value to the end of the list.
 - ### insertBefore:
-
+#### add a new node with the given newValue immediately before the first value node.
 - ### insertAfter:
-
+#### add a new node with the given newValue immediately after the first value node.
 
 ### Big O :
 * #### Insert : 
@@ -47,19 +46,19 @@
   ##### time:O(n)
   ##### space:O(1) 
 * #### insertBefore : 
-  ##### time:O()
-  ##### space:O() 
+  ##### time:O(n)
+  ##### space:O(1) 
 * #### insertAfter : 
-  ##### time:O()
-  ##### space:O() 
+  ##### time:O(n)
+  ##### space:O(1) 
 
 ## API
 - ### insert: insert node to the linked list head.
-- includes: return true/false when finding a value within the linked list that exists/doesn't exist.
-- toString: return a collection of all the values that exist in the linked list as a string.
-- append: add a node/multiple nodes to the end of the linked list.
-- insertBefore:
-- insertAfter:
+- ### includes: return true/false when finding a value within the linked list that exists/doesn't exist.
+- ### toString: return a collection of all the values that exist in the linked list as a string.
+- ### append: add a node/multiple nodes to the end of the linked list.
+- ### insertBefore: add a new node with the given newValue immediately before the first value node.
+- ### insertAfter: add a new node with the given newValue immediately after the first value node.
 
 ![LinkedList](../assets/linked-list.png)
 
