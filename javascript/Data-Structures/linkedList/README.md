@@ -8,6 +8,9 @@
 * ### Define a method called insert which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
 * ### Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 * ### Define a method called toString (or __str__ in Python) which takes in no arguments and returns a string representing all the values in the Linked List, formatted as: "{ a } -> { b } -> { c } -> NULL"
+* ### Define a method append(value) which adds a new node with the given value to the end of the list.
+* ### Define a method insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+* ### Define a method insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
 
 <br>
 
@@ -22,6 +25,12 @@
 #### else , return false.
 - ### toString:
 #### return all of the values in the linkedList as a string.
+- ### append: 
+
+
+- ### insertBefore:
+
+- ### insertAfter:
 
 
 ### Big O :
@@ -30,12 +39,27 @@
    ##### space:O(1)
 * #### Includes : 
    ##### time:O(n)
-   ##### space:O(n) 
+   ##### space:O(1) 
 * #### toString :
    ##### time:O(n)
-   ##### space:O(n) 
+   ##### space:O(1) 
+* #### append : 
+  ##### time:O(n)
+  ##### space:O(1) 
+* #### insertBefore : 
+  ##### time:O()
+  ##### space:O() 
+* #### insertAfter : 
+  ##### time:O()
+  ##### space:O() 
 
 ## API
+- ### insert: insert node to the linked list head.
+- includes: return true/false when finding a value within the linked list that exists/doesn't exist.
+- toString: return a collection of all the values that exist in the linked list as a string.
+- append: add a node/multiple nodes to the end of the linked list.
+- insertBefore:
+- insertAfter:
 
 ![LinkedList](../assets/linked-list.png)
 
