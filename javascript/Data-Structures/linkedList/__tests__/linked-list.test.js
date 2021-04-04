@@ -39,5 +39,15 @@ describe('Linked List', () => {
     expect(ll.toString()).toEqual("{ 8 } -> { 5 } -> { 10 } -> NULL");
   }); 
 
+  it('Can successfully add a node to the end of the linked list',()=>{
+    expect(ll.append(15).toString()).toEqual("{ 8 } -> { 5 } -> { 10 } -> { 15 } -> NULL"); 
+ });
+
+ it('Can successfully add multiple nodes to the end of a linked list',()=>{
+    ll.append(18);
+    ll.append(20);
+    expect(ll.toString()).toEqual("{ 8 } -> { 5 } -> { 10 } -> { 15 } -> { 18 } -> { 20 } -> NULL");
+});
+
 })
 
