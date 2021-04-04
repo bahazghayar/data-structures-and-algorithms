@@ -49,5 +49,21 @@ describe('Linked List', () => {
     expect(ll.toString()).toEqual("{ 8 } -> { 5 } -> { 10 } -> { 15 } -> { 18 } -> { 20 } -> NULL");
 });
 
+it ('Can successfully insert a node before a node located i the middle of a linked list',()=>{
+  expect(ll.insertBefore(10,9).toString()).toBe("{ 8 } -> { 5 } -> { 9 } -> { 10 } -> { 15 } -> { 18 } -> { 20 } -> NULL")
+});
+
+it('Can successfully insert a node before the first node of a linked list',()=>{
+    expect(ll.insertBefore(8,6).toString()).toBe("{ 6 } -> { 8 } -> { 5 } -> { 9 } -> { 10 } -> { 15 } -> { 18 } -> { 20 } -> NULL") 
+});
+
+it ('Can successfully insert after a node in the middle of the linked list',()=>{
+    expect(ll.insertAfter(10,12).toString()).toBe("{ 6 } -> { 8 } -> { 5 } -> { 9 } -> { 10 } -> { 12 } -> { 15 } -> { 18 } -> { 20 } -> NULL")
+});
+
+it ('Can successfully insert a node after the last node of the linked list',()=>{
+    expect(ll.insertAfter(20,22).toString()).toBe("{ 6 } -> { 8 } -> { 5 } -> { 9 } -> { 10 } -> { 12 } -> { 15 } -> { 18 } -> { 20 } -> { 22 } -> NULL") 
+});
+
 })
 
