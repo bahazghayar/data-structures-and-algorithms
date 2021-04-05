@@ -106,10 +106,10 @@ class LinkedList {
     }
 
     insertAfter(value, newValue) {
-        if (!value || !newValue) { 
+        if (!value || !newValue) {
             return "Please send a valid values";
         };
-        if (!this.head) { 
+        if (!this.head) {
             return "Please send a valid values";
         };
 
@@ -127,8 +127,42 @@ class LinkedList {
         } else {
             return "This value is not in the list"
         };
+    }
+
+    kthFromEnd(value) {
+        if (typeof (value) !== 'number' || value < 0) {
+            return "Please send a valid value";
+        };
+        if (!this.head) {
+            return "There is no values in the linked list";
+        };
+
+        let current = this.head;
+        let length = -1;
+        while (current) {
+            current = current.next;
+            length++;
+        }
+        if (length == 0) {
+            return `This linked list is size of one: ${this.head.value}`
+        }
+        if (length < value) {
+            return 'Exception'
+        } else if (length >= value) {
+            current = this.head;
+            let counter = 0;
+            while (current) {
+                let position = length - counter;
+                if (position == value) {
+                    return current.value;
+                }
+                counter++;
+                current = current.next
+            }
+        }
 
     }
+
 }
 
 module.exports = LinkedList;

@@ -65,5 +65,27 @@ it ('Can successfully insert a node after the last node of the linked list',()=>
     expect(ll.insertAfter(20,22).toString()).toBe("{ 6 } -> { 8 } -> { 5 } -> { 9 } -> { 10 } -> { 12 } -> { 15 } -> { 18 } -> { 20 } -> { 22 } -> NULL") 
 });
 
+it ('Should return an error where k is greater than the length of the linked list',()=>{
+  expect(ll.kthFromEnd(20)).toBe('Exception') 
+});
+
+it ('Should return the head where k and the length of the list are the same',()=>{
+  expect(ll.kthFromEnd(9)).toBe(6) 
+});
+
+it ('Should return an error where k is not a positive integer',()=>{
+  expect(ll.kthFromEnd(-10)).toBe('Please send a valid value');
+});
+
+it ('Should return an error where the linked list is of a size 1',()=>{
+  let ll2 = new LinkedList();
+  ll2.insert(3);
+  expect(ll2.kthFromEnd(3)).toBe('This linked list is size of one: 3');
+});
+
+it ('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list',()=>{
+  expect(ll.kthFromEnd(4)).toBe(12) 
+});
+
 })
 
