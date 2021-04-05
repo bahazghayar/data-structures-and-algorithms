@@ -11,6 +11,7 @@
 * ### Define a method append(value) which adds a new node with the given value to the end of the list.
 * ### Define a method insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
 * ### Define a method insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+* ### Define a method kthFromEnd(k) which return the node’s value that is k from the end of the linked list.
 
 <br>
 
@@ -31,6 +32,8 @@
 #### add a new node with the given newValue immediately before the first value node.
 - ### insertAfter:
 #### add a new node with the given newValue immediately after the first value node.
+- ### kthFromEnd: 
+#### return the node’s value that is k from the end of the linked list.
 
 ### Big O :
 * #### Insert : 
@@ -51,6 +54,13 @@
 * #### insertAfter : 
   ##### time:O(n)
   ##### space:O(1) 
+* #### kthFromEnd : 
+   1. ##### best case:    
+        ##### time:O(1)
+        ##### space:O(0) 
+   2. ##### worst case: 
+        ##### time:O(n)
+        ##### space:O(1) 
 
 ## API
 - ### insert: insert node to the linked list head.
@@ -59,6 +69,11 @@
 - ### append: add a node/multiple nodes to the end of the linked list.
 - ### insertBefore: add a new node with the given newValue immediately before the first value node.
 - ### insertAfter: add a new node with the given newValue immediately after the first value node.
+- ### kthFromEnd: return the node’s value that is k from the end of the linked list.
 
-![LinkedList](../assets/linked-list.png)
+
+![LinkedList5](../assets/cc5.png)
+![LinkedList67](../assets/cc67.png)
+
+
 
