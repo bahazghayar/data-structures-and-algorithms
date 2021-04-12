@@ -78,7 +78,7 @@ class Queue {
         return temp.value ;
 
     }
-
+    
     peek() {
         if (this.isEmpty()) return 'Exception' ;
         return this.front.value ; 
