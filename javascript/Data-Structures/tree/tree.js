@@ -86,9 +86,9 @@ class BinarySearchTree {
     }
 
     contains(value) {
-        if (this.root === null){
+        if (this.root === null) {
             return 'The tree is empty';
-        } 
+        }
         let current = this.root;
 
         while (current) {
