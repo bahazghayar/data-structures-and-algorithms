@@ -6,6 +6,7 @@
   "scripts": {
     "get-challenge": "`which bash` ./code-challenges/bin/get-challenge.sh",
     "test": "jest --verbose --coverage",
+    "test-watch":"jest --verbose --coverage --watch-all",
     "lint": "eslint '**/*.js'"
   },
   "author": "",
@@ -18,3 +19,8 @@
     "supertest": "^4.0.2"
   }
 }
+
+
+
+    
+    

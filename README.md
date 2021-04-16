@@ -16,6 +16,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 |QueueWithStacks |[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/Data-Structures/queueWithStacks)      |
 |fifoAnimalShelter|[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/Data-Structures/fifoAnimalShelter)   |
 |multiBracketValidation|[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/code-challenges/multiBracketValidation)|
+|     Tree       |[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/Data-Structures/tree)                 |
 
 
 
