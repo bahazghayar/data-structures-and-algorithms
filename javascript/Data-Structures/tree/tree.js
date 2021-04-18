@@ -48,6 +48,18 @@ class BinaryTree {
         _traverse(this.root);
         return results;
     }
+
+    find_maximum_value(BinaryTreeMethod) {
+        let max = this.root.value;
+    
+        BinaryTreeMethod.forEach((value) => {
+            if (max < value) {
+                max = value;
+            }
+        })
+
+        return max;
+    }
 }
 
 class BinarySearchTree {
@@ -86,9 +98,9 @@ class BinarySearchTree {
     }
 
     contains(value) {
-        if (this.root === null){
+        if (this.root === null) {
             return 'The tree is empty';
-        } 
+        }
         let current = this.root;
 
         while (current) {
