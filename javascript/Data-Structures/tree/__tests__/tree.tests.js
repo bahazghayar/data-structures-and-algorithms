@@ -82,6 +82,17 @@ describe('Binary Tree', () => {
     expect(postOrder).toEqual(expected);
   });
 
+  it('Should find the maximum value', () => {
+    let BinaryTreePreOrder = tree.preOrder();
+    let BinaryTreeInOrder = tree.inOrder();
+    let BinaryTreePostOrder = tree.postOrder();
+
+    expect(tree.find_maximum_value(BinaryTreePreOrder)).toBe(8);
+    expect(tree.find_maximum_value(BinaryTreeInOrder)).toBe(8);
+    expect(tree.find_maximum_value(BinaryTreePostOrder)).toBe(8);
+  
+  });
+
 });
 
 
