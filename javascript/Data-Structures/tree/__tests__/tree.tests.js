@@ -93,6 +93,15 @@ describe('Binary Tree', () => {
   
   });
 
+
+  it('Should return a list of the values in the tree in the order they were encountered using breadth first', () => {
+    let expected = [1,2,3,4,5,6,7,8];
+    const breadthFirst = tree.breadth_first_traversal() ; 
+
+    expect(breadthFirst).toEqual(expected);
+    
+  });
+
 });
 
 
