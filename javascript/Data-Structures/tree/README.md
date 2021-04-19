@@ -8,7 +8,8 @@
 * Create a BinaryTree class
 * Define a method for each of the depth first traversals called preOrder, inOrder, and postOrder which returns an array of the values, ordered appropriately.
 * Define a method for getting the max value in the tree.
-* Any exceptions or errors that come from your code should be semantic, capturable errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
+* Define a method for breadth first traversal.
+
 
 * Create a BinarySearchTree class
 * Define a method named add that accepts a value, and adds a new node with that value in the correct location in the binary search tree.
@@ -46,6 +47,12 @@ declare a variable 'max' and asign the root to this variable.
 loop through the tree and check if max is less than the value, go to check the second value and so on. 
 until it reaches the max number, asing it to the max variable and return it.
 
+breadth_first_traversal:
+create a method breadth first traversal
+declare a new variable and an empty array.
+while there are values in the queue, take the first one and push it to the new array 
+
+
 Binary Search Tree
 add:
   declare a node and asign the root to it
@@ -71,13 +78,16 @@ postOrder:
 find_maximum_value:
   Time: O(n) 
   Space: O(n)
+breadth_first_traversal:
+  Time: O(n) 
+  Space: O(n)
 
 Binary Search Tree
 add:
-  Time: O(n) 
+  Time: O(log n) 
   Space: O(h)
 contain:
-  Time: O(n) 
+  Time: O(log n) 
   Space: O(h)
 
 
@@ -87,6 +97,7 @@ preOrder: it creates a tree (Root - Left - Right)
 inOrder:  it creates a tree (Left - Root - Right)
 postOrder: it creates a tree (left - Right - Root)
 find_maximum_value: it returns the max value from the tree. 
+breadth_first_traversal: it returns a list of the values in the tree in the order they were encountered.
 
 Binary Search Tree
 add: it creates a sorted tree.
@@ -94,3 +105,5 @@ contain: it finds if a specific value is in the tree.
 
 
 ![findMaxValue](../assets/findMaxValue.png)
+![breadthFirstTraversal](../assets/breadthFirstTraversal.png)
+

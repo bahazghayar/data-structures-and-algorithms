@@ -51,7 +51,7 @@ class BinaryTree {
 
     find_maximum_value(BinaryTreeMethod) {
         let max = this.root.value;
-    
+
         BinaryTreeMethod.forEach((value) => {
             if (max < value) {
                 max = value;
@@ -60,7 +60,27 @@ class BinaryTree {
 
         return max;
     }
+
+    breadth_first_traversal() {
+        let node = this.root;
+        const queue = [node];
+        const results = [];
+
+        while (queue.length) {
+            node = queue.shift();
+            results.push(node.value);
+            if (node.left) {
+                queue.push(node.left);
+            }
+            if (node.right) {
+                queue.push(node.right);
+            }
+
+        }
+        return results;
+    }
 }
+
 
 class BinarySearchTree {
     constructor(root = null) {
