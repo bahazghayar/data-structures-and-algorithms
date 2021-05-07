@@ -21,6 +21,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 | Insertion Sort |[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/code-challenges/insertionSort)        |
 | Merge Sort     |[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/code-challenges/mergeSort)            |
 | Quick Sort     |[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/code-challenges/quickSort)            |
+| Hash Table     |[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/Data-Structures/hashtable)            |
 
 
 
