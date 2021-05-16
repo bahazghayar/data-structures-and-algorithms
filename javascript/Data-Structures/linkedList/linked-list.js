@@ -162,9 +162,35 @@ class LinkedList {
         }
 
     }
-
 }
 
-module.exports = LinkedList;
+function reverseList(list) {
+    let current = list.head;
+    let newLl = new LinkedList();
+    while (current) {
+        newLl.insert(current.value);
+        current = current.next;
+    }
+    return newLl;
 
+    // console.log(list)
+    // let head = list.head;
 
+    // let newHead = null;
+    // let tmp = null;
+    // while (head) {
+    //     tmp = head.next;
+    //     head.next = newHead;
+    //     newHead = head;
+    //     head = tmp;
+    //     // console.log(newHead)
+    // }
+    // return newHead;
+}
+
+module.exports =
+{
+    LinkedList,
+    reverseList,
+    
+}

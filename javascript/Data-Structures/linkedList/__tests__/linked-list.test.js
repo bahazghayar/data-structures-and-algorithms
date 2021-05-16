@@ -1,7 +1,7 @@
 'use strict';
 
 const Node = require('../node.js');
-const LinkedList = require('../linked-list.js');
+const {reverseList ,  LinkedList}  = require('../linked-list.js');
 const { expect } = require('@jest/globals');
 
 const zipLists = require('../llZip/ll-zip.js');
@@ -26,6 +26,7 @@ describe('Linked List', () => {
     expect(ll.head.value).toEqual(5);
     ll.insert(8);
     expect(ll.head.value).toEqual(8);
+    expect(ll.head.next.value).toEqual(5)
   });
 
   it('Will return true when finding a value within the linked list that exists', () => {
@@ -91,6 +92,20 @@ describe('Linked List', () => {
 
 })
 
+
+describe('21 questions', () => {
+  
+  it('(206) Should reverse a linked list', () => {
+    let llTest = new LinkedList();
+    llTest.insert(3);
+    llTest.insert(2);
+    llTest.insert(1);
+    
+    // 3 , 2 ,1 
+    expect(reverseList(llTest).head.value).toBe(3);
+    expect(reverseList(llTest).head.next.value).toEqual(2)
+  }); 
+})
 
 describe('llZip', () => {
   it('Should zip two linked lists together', () => {
