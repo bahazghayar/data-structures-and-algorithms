@@ -8,7 +8,6 @@ function repeatedWord(string) {
     const arr = string.match(/\w+/g);
     // console.log(arr)
     let wordArr = [];
-
     if (string.length){
         for (let i = 0; i < arr.length; i++) {
 
