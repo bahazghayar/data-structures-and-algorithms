@@ -23,6 +23,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 | Quick Sort     |[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/code-challenges/quickSort)            |
 | Hash Table     |[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/Data-Structures/hashtable)            |
 | repeatedWord   |[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/code-challenges/repeatedWord)         |
+| Graph          |[link](https://github.com/bahazghayar/data-structures-and-algorithms/tree/main/javascript/Data-Structures/graph)                |
 
 
 
